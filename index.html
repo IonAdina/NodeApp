@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="page2.css" />
+    <script src="page2.js" defer></script>
+   
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">Make</div>
+      <div class="grid-item">Your</div>
+      <div class="grid-item">Universe</div>
+      <div class="grid-item">
+        <div class="button" onclick="random()">Random</div>
+      </div>
+      <div class="grid-item">
+        <div class="aura-cerc" id="aura">
+          <div class="circle" id="planeta">
+            <div id="imageContainer"></div>
+          </div>
+        </div>
+        <footer class="footer-text">YourPlanet</footer>
+      </div>
+
+      <div class="grid-item">
+        <div class="card">
+          <div class="row">Pick a color</div>
+          <br />
+          <div class="row">
+            <div class="square blue" onclick="schimbaCuloare('blue')"></div>
+            <div class="square violet" onclick="schimbaCuloare('violet')"></div>
+            <div class="square red" onclick="schimbaCuloare('red')"></div>
+          </div>
+          <div class="row">
+            <div class="square yellow" onclick="schimbaCuloare('yellow')"></div>
+            <div class="square green" onclick="schimbaCuloare('green')"></div>
+            <div class="square maroon" onclick="schimbaCuloare('maroon')"></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-item">
+        <input
+          type="file"
+          id="imageUpload"
+          name="imageUpload"
+          onchange="previewImage(event)"
+        />
+      </div>
+      <div class="grid-item">
+        <input
+          type="text"
+          id="text-input"
+          placeholder="Name it..."
+          onkeyup="adaugaTextInFooter()"
+        />
+      </div>
+      <div class="grid-item">
+        <div class="button" id="savebutton" onclick="save()">Save</div>
+      </div>
+      <div class="">
+        Your plantes
+        <div class="obiect">
+          <div class="row">
+            <div id="circlesContainer-all"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h1>CRUD</h1>
+
+    <div id="create-form">
+      <h2>CREATE</h2>
+      <input type="text" id="create-input" placeholder="Introduceți un nume" />
+      <button  onclick="adaugareGal()">Adăugare</button>
+    </div>
+
+    <div id="read-container2" class="read-container">
+      <h2>READ</h2>
+    </div>
+
+    <form id="update-form">
+      <h2>UPDATE</h2>
+      <input type="text" id="update-input" placeholder="Introduceți un id" />
+      <input type="text" id="newName" placeholder="Introduceți un nume nou" />
+      <button type="submit" onclick="editareGal()">Actualizare</button>
+    </form>
+
+    
+    
+  </body>
+</html>
